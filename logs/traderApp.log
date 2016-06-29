@@ -1,0 +1,71 @@
+2016-06-27 18:22:19 ERROR FileDataReader:51 - Error while reading the data file 'nullnull', The file was not found
+2016-06-27 18:23:08 ERROR PropertyReader:104 - The resource URL while reading property file is null, cannot proceed further.
+2016-06-27 18:23:36 ERROR PropertyReader:104 - The resource URL while reading property file is null, cannot proceed further.
+2016-06-27 18:30:35 ERROR PropertyReader:104 - The resource URL while reading property file is null, cannot proceed further.
+2016-06-27 18:31:56 ERROR PropertyReader:104 - The resource URL while reading property file is null, cannot proceed further.
+2016-06-27 18:35:48 ERROR PropertyReader:106 - Unable to create property file URI, Property file /'trader.properties' not found in class path, cannot proceed further.
+2016-06-27 18:49:15 ERROR PropertyReader:106 - Unable to create property file URI, Property file 'trader.properties' not found in class path, cannot proceed further.
+2016-06-27 18:51:39 ERROR PropertyReader:47 - Error while loading the application properties, Unable to find the properties file.
+2016-06-27 18:55:31 ERROR PropertyReader:109 - Unable to create property file URI, Property file 'trader.properties' not found in class path, cannot proceed further.
+2016-06-27 19:01:54 ERROR PropertyReader:109 - Unable to create property file URI, Property file 'trader.properties' not found in class path, cannot proceed further.
+2016-06-27 19:04:46 ERROR FileDataReader:51 - Error while reading the data file 'nullnull', The file was not found
+2016-06-27 19:04:47 ERROR FileDataReader:51 - Error while reading the data file 'nullnull', The file was not found
+2016-06-27 19:07:24 ERROR FileDataReader:51 - Error while reading the data file 'nullnull', The file was not found
+2016-06-27 19:27:18 ERROR FileDataReader:51 - Error while reading the data file 'tradeData.csv', The file was not found
+2016-06-28 22:03:29 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:03:29 ERROR PropertyReader:119 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-06-28 22:03:29 ERROR PropertyReader:52 - Could not complete bind due to an configuration error.
+2016-06-28 22:07:53 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:07:53 ERROR PropertyReader:119 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-06-28 22:07:53 ERROR PropertyReader:52 - Could not complete bind due to an configuration error.
+2016-06-28 22:08:48 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:08:48 ERROR FileDataBinder:119 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-06-28 22:08:48 ERROR FileDataBinder:52 - Could not complete bind due to an configuration error.
+2016-06-28 22:11:47 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:15:12 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:19:00 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:29:23 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:34:29 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:35:21 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:39:32 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:39:54 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:43:37 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:44:02 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:45:12 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:45:24 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:49:26 INFO  Trader:20 - Trader Application started.
+2016-06-28 22:51:10 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:00:36 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:01:19 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:01:35 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:02:08 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:05:11 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:11:25 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:16:52 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:26:01 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:34:38 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:34:38 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/main/res/tradeData.csv', The file was not found
+2016-06-28 23:35:01 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:36:12 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:36:39 INFO  Trader:20 - Trader Application started.
+2016-06-28 23:46:53 INFO  Trader:20 - Trader Application started.
+2016-06-29 00:18:55 INFO  Trader:20 - Trader Application started.
+2016-06-29 00:19:58 INFO  Trader:20 - Trader Application started.
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:25 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:26 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:26 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:26 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:01:26 ERROR FileDataReader:51 - Error while reading the data file '/Users/sonu/dev/proj/java/idea/src/test/res/tradeData.csv', The file was not found
+2016-06-29 07:30:50 ERROR FileDataBinder:119 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-06-29 07:30:50 ERROR FileDataBinder:52 - Could not complete bind due to an configuration error.
+2016-06-29 07:45:01 ERROR FileDataBinder:119 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-06-29 07:45:01 ERROR FileDataBinder:52 - Could not complete bind due to an configuration error.
+2016-06-29 07:50:27 ERROR FileDataBinder:121 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-06-29 07:50:27 ERROR FileDataBinder:53 - Could not complete bind due to an configuration error.
