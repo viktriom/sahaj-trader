@@ -38,6 +38,13 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.vt</groupId>
+            <artifactId>o2f</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>/Users/sonu/dev/proj/java/sahaj-trader/lib/o2f-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
 
     </dependencies>
 

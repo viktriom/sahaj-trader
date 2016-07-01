@@ -4,7 +4,7 @@ import com.xyz.trader.data.PersistenceHandler;
 import com.xyz.trader.data.PersistenceHandlerFactory;
 import com.xyz.trader.exceptions.AppInitException;
 import com.xyz.trader.exceptions.TraderException;
-import com.xyz.trader.persistence.exceptions.UnmappedBeanException;
+import com.vt.o2f.exceptions.UnmappedBeanException;
 import org.apache.log4j.Logger;
 
 import java.util.List;

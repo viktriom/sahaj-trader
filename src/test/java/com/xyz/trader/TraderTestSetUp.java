@@ -4,7 +4,7 @@ import com.xyz.trader.bean.Order;
 import com.xyz.trader.bean.OrderStatus;
 import com.xyz.trader.data.PersistenceHandler;
 import com.xyz.trader.data.PersistenceHandlerFactory;
-import com.xyz.trader.persistence.PersistenceProperties;
+import com.vt.o2f.PersistenceProperties;
 import com.xyz.trader.properties.ApplicationProperties;
 import com.xyz.trader.util.PropertyReader;
 import org.junit.Before;

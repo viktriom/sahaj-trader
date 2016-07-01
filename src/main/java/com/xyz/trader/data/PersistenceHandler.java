@@ -1,7 +1,7 @@
 package com.xyz.trader.data;
 
 import com.xyz.trader.exceptions.TraderException;
-import com.xyz.trader.persistence.exceptions.UnmappedBeanException;
+import com.vt.o2f.exceptions.UnmappedBeanException;
 
 import java.util.List;
 

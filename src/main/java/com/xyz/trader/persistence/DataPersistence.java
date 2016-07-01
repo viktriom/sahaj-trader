@@ -1,10 +1,11 @@
-package com.xyz.trader.persistence;
+package com.vt.o2f;
 
+import com.vt.o2f.exceptions.PersistenceException;
 import com.xyz.trader.data.PersistenceHandler;
+import com.vt.o2f.binder.FileDataBinder;
+import com.vt.o2f.dataWriter.BeanToFileConverter;
+import com.vt.o2f.exceptions.UnmappedBeanException;
 import com.xyz.trader.exceptions.TraderException;
-import com.xyz.trader.persistence.binder.FileDataBinder;
-import com.xyz.trader.persistence.dataWriter.BeanToFileConverter;
-import com.xyz.trader.persistence.exceptions.UnmappedBeanException;
 
 import java.util.List;
 
@@ -23,11 +24,21 @@ public class DataPersistence implements PersistenceHandler {
 
     @Override
     public List<Object> readData(String fullyQualifiedClassName) throws UnmappedBeanException, TraderException {
-        return fileDataBinder.readData(fullyQualifiedClassName);
+        List<Object> list = null;
+        try{
+            list = fileDataBinder.readData(fullyQualifiedClassName);
+        }catch (PersistenceException ex){
+            throw new TraderException(ex.getMessage());
+        }
+        return list;
     }
 
     @Override
     public void writeData(String fullyQualifiedClassName, List<Object> objects) throws UnmappedBeanException, TraderException {
+        try{
         beanToFileConverter.writeData(fullyQualifiedClassName, objects);
+        }catch (PersistenceException ex){
+            throw new TraderException(ex.getMessage());
+        }
     }
 }

@@ -34,7 +34,7 @@ public class ApplicationPropertiesTest extends TraderTestSetUp {
 
     @Test
     public void testGetDataFileDirectory() throws Exception{
-        assertEquals(ApplicationProperties.getDataFileDirectory(),"/Users/sonu/dev/proj/java/trader/src/test/res/");
+        assertEquals(ApplicationProperties.getDataFileDirectory(),"/Users/sonu/dev/proj/java/sahaj-trader/src/test/res/");
     }
 
     @After

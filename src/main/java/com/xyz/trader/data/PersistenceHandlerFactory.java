@@ -1,6 +1,6 @@
 package com.xyz.trader.data;
 
-import com.xyz.trader.persistence.DataPersistence;
+import com.vt.o2f.DataPersistence;
 
 /**
  * Created by sonu on 27/06/16.

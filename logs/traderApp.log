@@ -69,3 +69,11 @@
 2016-06-29 07:45:01 ERROR FileDataBinder:52 - Could not complete bind due to an configuration error.
 2016-06-29 07:50:27 ERROR FileDataBinder:121 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
 2016-06-29 07:50:27 ERROR FileDataBinder:53 - Could not complete bind due to an configuration error.
+2016-07-01 19:43:52 ERROR FileDataBinder:121 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-07-01 19:43:52 ERROR FileDataBinder:53 - Could not complete bind due to an configuration error.
+2016-07-01 19:44:26 ERROR FileDataBinder:121 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-07-01 19:44:26 ERROR FileDataBinder:53 - Could not complete bind due to an configuration error.
+2016-07-01 23:55:00 ERROR FileDataBinder:120 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-07-01 23:55:00 ERROR FileDataBinder:52 - Could not complete bind due to an configuration error.
+2016-07-01 23:55:37 ERROR FileDataBinder:120 - Error binding data to bean, the qualified name provided for bean is in correct. className=null
+2016-07-01 23:55:37 ERROR FileDataBinder:52 - Could not complete bind due to an configuration error.

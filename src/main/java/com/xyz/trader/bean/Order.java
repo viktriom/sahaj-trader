@@ -1,7 +1,7 @@
 package com.xyz.trader.bean;
 
-import com.xyz.trader.persistence.annotations.DataFileMappedBean;
-import com.xyz.trader.persistence.annotations.DataFileMappedField;
+import com.vt.o2f.annotations.DataFileMappedBean;
+import com.vt.o2f.annotations.DataFileMappedField;
 
 /**
  * Created by sonu on 25/06/16.
