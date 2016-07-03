@@ -1,6 +1,5 @@
 package com.xyz.trader.business;
 
-import com.gs.collections.api.block.predicate.Predicate;
 import com.gs.collections.api.block.predicate.Predicate2;
 import com.gs.collections.api.list.MutableList;
 import com.gs.collections.impl.list.mutable.FastList;
@@ -14,10 +13,12 @@ import com.vt.o2f.PersistenceProperties;
 import com.vt.o2f.exceptions.UnmappedBeanException;
 import com.xyz.trader.properties.ApplicationProperties;
 import com.xyz.trader.util.PropertyReader;
-import javafx.application.Application;
 import org.apache.log4j.Logger;
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by sonu on 28/06/16.
@@ -28,6 +29,7 @@ public class Trader {
     private List<Object> tradeOrders;
     private PersistenceHandler persistenceHandler;
     private MutableList<Object> orderStatusList;
+    private Map<String,Map<String,List<OrderStatus>>> orderStatusCollection;
 
     private Predicate2<Object, String> ACCEPT_SAME_COMPANY_ORDERS = (object, companyName) -> {
         OrderStatus orderStatus = (OrderStatus)object;
@@ -83,7 +85,7 @@ public class Trader {
     }
 
     private void resolveOrders() {
-        prepareOrderStatusList();
+        prepareOrderStatusCollection();
         for(Object obj : orderStatusList) {
             OrderStatus order = (OrderStatus) obj;
             if(order.getStatus().equals(ApplicationProperties.getOrderCloseStatus())) continue;
@@ -91,7 +93,7 @@ public class Trader {
         }
     }
 
-    private void prepareOrderStatusList() {
+    private void prepareOrderStatusCollection() {
         orderStatusList= FastList.newList();
         for(Object obj : tradeOrders){
             Order order = (Order) obj;
@@ -102,16 +104,43 @@ public class Trader {
             orderStatus.setSide(order.getSide());
             orderStatus.setRemainingQuantity(order.getQuantity());
             orderStatus.setStatus(ApplicationProperties.getOrderOpenStatus());
+            orderStatus.setCounterOrderType(order.getSide().equals(
+                    ApplicationProperties.getOrderGainSide())?
+                    ApplicationProperties.getOrderLossSide():
+                    ApplicationProperties.getOrderGainSide());
             orderStatusList.add(orderStatus);
+            putDataIntoCollection(orderStatus);
+        }
+    }
+
+    private void putDataIntoCollection(OrderStatus orderStatus) {
+        if(null == orderStatusCollection){
+            orderStatusCollection = new HashMap<>();
+        }
+        Map<String,List<OrderStatus>> innerMap = orderStatusCollection.get(orderStatus.getCompany());
+        if(null == innerMap){
+            innerMap = new HashMap<>();
+            List<OrderStatus> orderStatusList = new LinkedList<>();
+            orderStatusList.add(orderStatus);
+            innerMap.put(orderStatus.getSide(),orderStatusList);
+            orderStatusCollection.put(orderStatus.getCompany(),innerMap);
+        }else{
+            List<OrderStatus> orderStatusList = innerMap.get(orderStatus.getSide());
+            if(null == orderStatusList){
+                orderStatusList = new LinkedList<>();
+                orderStatusList.add(orderStatus);
+                innerMap.put(orderStatus.getSide(),orderStatusList);
+            }else{
+                orderStatusList.add(orderStatus);
+            }
         }
     }
 
     private void computeStatusForCurrentOrderStatus(final OrderStatus orderStatus) {
-        MutableList<Object> counterOrderStatuses = orderStatusList.selectWith(ACCEPT_SAME_COMPANY_ORDERS, orderStatus.getCompany())
-                .selectWith(ACCEPT_COUNTER_ORDERS, orderStatus.getSide())
-                .selectWith(ACCEPT_OPEN_ORDERS, ApplicationProperties.getOrderOpenStatus());
-        for(Object obj : counterOrderStatuses){
-            OrderStatus odrStatus = (OrderStatus)obj;
+        List<OrderStatus> counterOrderStatuses = orderStatusCollection.get(orderStatus.getCompany()).get(orderStatus.getCounterOrderType());
+        if(null == counterOrderStatuses)
+            return;
+        for(OrderStatus odrStatus : counterOrderStatuses){
             if(orderStatus.equals(odrStatus))continue;
             if(!computeRemainingQuantityAndGetStatus(orderStatus, odrStatus).equals(ApplicationProperties.getOrderOpenStatus()))
                 break;

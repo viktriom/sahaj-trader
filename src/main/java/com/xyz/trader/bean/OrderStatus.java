@@ -26,6 +26,8 @@ public class OrderStatus {
     @DataFileMappedField(mappedToColumnName = "status", mappedToFieldType = "String")
     private String status;
 
+    private String counterOrderType;
+
     public OrderStatus(){
 
     }
@@ -85,6 +87,14 @@ public class OrderStatus {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getCounterOrderType() {
+        return counterOrderType;
+    }
+
+    public void setCounterOrderType(String counterOrderType) {
+        this.counterOrderType = counterOrderType;
     }
 
     @Override

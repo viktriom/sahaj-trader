@@ -1,6 +1,6 @@
 stockId,side,company,quantity,remainingQuantity,status
-1,Buy,ABC,10,0,Close
-2,Sell,XYZ,15,0,Close
-3,Sell,ABC,13,3,Open
-4,Buy,XYZ,10,0,Close
-5,Buy,XYZ,8,3,Open
+1,Buy,ABC,10,0,Closed,Sell
+2,Sell,XYZ,15,0,Closed,Buy
+3,Sell,ABC,13,3,Open,Buy
+4,Buy,XYZ,10,0,Closed,Sell
+5,Buy,XYZ,8,3,Open,Sell
