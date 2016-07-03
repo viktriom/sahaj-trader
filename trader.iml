@@ -22,7 +22,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.vt:o2f:1.0-SNAPSHOT">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/o2f-1.0-SNAPSHOT.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../proj/java/sahaj-trader/lib/o2f-1.0-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -14,15 +14,12 @@ import com.gs.collections.api.block.function.Function;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by sonu on 29/06/16.
- */
 public class TraderTest extends TraderTestSetUp{
-    Trader trader;
+    private Trader trader;
 
-    Predicate2<Object, String> FILTER_IN_ORDERS_BY_STATUS = (object, status) -> (((OrderStatus)object).getStatus().equals(status));
-    Function<Object, Integer> EXTRACT_ORDER_IDS = (object) -> (((OrderStatus)object).getStockId());
-    Function<Object, Integer> EXTRACT_ORDER_QUANTITIES = (object) -> (((OrderStatus)object).getRemainingQuantity());
+    private Predicate2<Object, String> FILTER_IN_ORDERS_BY_STATUS = (object, status) -> (((OrderStatus)object).getStatus().equals(status));
+    private Function<Object, Integer> EXTRACT_ORDER_IDS = (object) -> (((OrderStatus)object).getStockId());
+    private Function<Object, Integer> EXTRACT_ORDER_QUANTITIES = (object) -> (((OrderStatus)object).getRemainingQuantity());
 
     @Before
     public void setUp() throws Exception {

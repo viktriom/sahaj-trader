@@ -20,9 +20,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by sonu on 28/06/16.
- */
 public class Trader {
 
     private Logger log = Logger.getLogger(Trader.class);
@@ -30,21 +27,6 @@ public class Trader {
     private PersistenceHandler persistenceHandler;
     private MutableList<Object> orderStatusList;
     private Map<String,Map<String,List<OrderStatus>>> orderStatusCollection;
-
-    private Predicate2<Object, String> ACCEPT_SAME_COMPANY_ORDERS = (object, companyName) -> {
-        OrderStatus orderStatus = (OrderStatus)object;
-        return orderStatus.getCompany().equals(companyName);
-    };
-
-    private Predicate2<Object,String> ACCEPT_COUNTER_ORDERS = (object, currentOrderSide) -> {
-        OrderStatus orderStatus = (OrderStatus)object;
-        return !orderStatus.getSide().equals(currentOrderSide);
-    };
-
-    private Predicate2<Object, String> ACCEPT_OPEN_ORDERS = (object, openOrderStatus) -> {
-        OrderStatus orderStatus = (OrderStatus)object;
-        return orderStatus.getStatus().equals(openOrderStatus);
-    };
 
     public Trader(){
 
