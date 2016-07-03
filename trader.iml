@@ -19,14 +19,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: com.goldmansachs:gs-collections-testutils:7.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-codec:commons-codec:1.10" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="module-library">
-      <library name="Maven: com.vt:o2f:1.0-SNAPSHOT">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../proj/java/sahaj-trader/lib/o2f-1.0-SNAPSHOT.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Maven: com.github.viktriom:o2f:-8babf0bcdf-1" level="project" />
   </component>
 </module>
